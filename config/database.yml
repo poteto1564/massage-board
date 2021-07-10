@@ -10,18 +10,10 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  database: message_board_production
-  username: message_board
-  password: <%= ENV['MESSAGE_BOARD_DATABASE_PASSWORD'] %>
-
-production:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  pool: 5  
+  pool: 5
 
 development:
   <<: *default
