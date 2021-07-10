@@ -44,6 +44,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pagy'
-group :production do
-  gem 'pg', '>= 0.18', '< 2.0'
-end
+# 本番環境(heroku)ではPostgreSQLを使用
+gem 'pg', group: :production
